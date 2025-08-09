@@ -55,14 +55,15 @@ Upload to GitHub Pages for free hosting.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Animated Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
+
+    <!-- Navbar -->
     <header>
         <nav>
-            <h1 class="logo">MyPortfolio</h1>
+            <h1 class="logo">My Portfolio</h1>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -73,95 +74,89 @@ Upload to GitHub Pages for free hosting.
 
     <!-- Hero Section -->
     <section class="hero">
-        <h2>Hello, I'm <span>Kamal raj A</span></h2>
-        <p>Aspiring Machine Learning & Web Developer</p>
-        <a href="#projects" class="btn">View My Work</a>
+        <div class="hero-text fade-in">
+            <h2>Hello, I'm <span>Ram kumar S</span></h2>
+            <p>Aspiring Machine Learning & Web Developer</p>
+            <a href="#projects" class="btn">See My Work</a>
+        </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- About -->
+    <section id="about" class="about fade-in">
         <h2>About Me</h2>
         <p>
-            I'm a passionate developer who loves building interactive web apps and AI-powered projects.
-            Skilled in HTML, CSS, JavaScript, Python, and Machine Learning frameworks.
+            I create interactive websites and AI-powered applications.
+            Skilled in HTML, CSS, JavaScript, Python, Flask, and Machine Learning.
         </p>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-
-        <!-- Project 1 -->
-        <a href="https://github.com/username/healthcare-prediction-app" target="_blank" class="project-link">
-            <div class="project-card">
+    <!-- Projects -->
+    <section id="projects" class="projects fade-in">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <a href="https://github.com/username/healthcare" target="_blank" class="project-card">
                 <h3>Healthcare Prediction App</h3>
-                <p>ML-powered app to predict diseases and suggest precautions.</p>
-            </div>
-        </a>
-
-        <!-- Project 2 -->
-        <a href="https://github.com/username/stock-price-predictor" target="_blank" class="project-link">
-            <div class="project-card">
+                <p>Predict diseases and suggest precautions using ML.</p>
+            </a>
+            <a href="https://github.com/username/stock" target="_blank" class="project-card">
                 <h3>Stock Price Predictor</h3>
-                <p>Flask-based app predicting stock prices using Keras models.</p>
-            </div>
-        </a>
-
-        <!-- Project 3 -->
-        <a href="https://github.com/username/number-plate-recognition" target="_blank" class="project-link">
-            <div class="project-card">
-                <h3>Number Plate Recognition</h3>
-                <p>YOLOv5 and OCR-based vehicle number plate detection.</p>
-            </div>
-        </a>
-    </div>
+                <p>Predict stock trends with deep learning models.</p>
+            </a>
+            <a href="https://github.com/username/numberplate" target="_blank" class="project-card">
+                <h3>E-commerce website</h3>
+                <p>Building an online platform for selling products or services.</p>
+            </a>
+        </div>
     </section>
 
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Contact -->
+    <section id="contact" class="contact fade-in">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:kamalraj3106@gmail.com">kamalraj3106@gmail.com</a></p>
+        <p>Email: <a href="mailto:sramkumar2122@gmail.com">sramkumar2122@gmail.com</a></p>
         <p>
-            <a href="https://github.com/Kamal-Raj-A" target="_blank">GitHub</a> |
-            <a href="https://www.linkedin.com/in/kamal-raj-a-2a5054290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+            <a href="https://github.com/username" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
         </p>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Kamal Raj. All Rights Reserved.</p>
+        <p>&copy; 2025 Ram kumar. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
 
 ```
 ## style.css
 ```
-/* General Styles */
+/* General */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background: #0f0f0f;
+    color: #fff;
+    scroll-behavior: smooth;
 }
 
 /* Navbar */
 header {
-    background: #222;
-    padding: 15px 0;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
+    padding: 15px 40px;
 }
 .logo {
-    color: #fff;
+    color: #00f7ff;
     font-size: 1.5em;
+    font-weight: bold;
 }
 .nav-links {
     list-style: none;
@@ -171,81 +166,78 @@ nav {
     margin-left: 20px;
 }
 .nav-links a {
-    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s;
 }
 .nav-links a:hover {
-    color: #00bcd4;
+    color: #00f7ff;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to right, #00bcd4, #009688);
-    color: #fff;
+    height: 100vh;
+    background: linear-gradient(120deg, #ff0080, #7928ca, #00f7ff);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 100px 20px;
 }
 .hero h2 {
     font-size: 2.5em;
 }
 .hero span {
-    color: #ffeb3b;
+    color: #00f7ff;
 }
-.hero .btn {
+.btn {
     display: inline-block;
     margin-top: 15px;
-    padding: 10px 20px;
-    background: #ffeb3b;
-    color: #333;
+    padding: 10px 25px;
+    background: #00f7ff;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 30px;
+    transition: transform 0.3s, background 0.3s;
 }
-.hero .btn:hover {
-    background: #ffc107;
+.btn:hover {
+    background: #fff;
+    transform: scale(1.1);
 }
 
 /* About Section */
-.about {
-    padding: 50px 20px;
-    max-width: 800px;
+.about, .projects, .contact {
+    padding: 80px 20px;
+    max-width: 900px;
     margin: auto;
     text-align: center;
 }
 
-/* Projects Section */
-.projects {
-    background: #fff;
-    padding: 50px 20px;
-}
+/* Projects */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 .project-card {
-    background: #fafafa;
+    background: #1e1e1e;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 .project-card:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease;
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #00f7ff;
 }
 
 /* Contact Section */
-.contact {
-    background: #02b4cb;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-}
 .contact a {
-    color: #ffeb3b;
-    text-decoration: none;
+    color: #00f7ff;
 }
 .contact a:hover {
     text-decoration: underline;
@@ -253,17 +245,26 @@ nav {
 
 /* Footer */
 footer {
-    background: #222;
-    color: #fff;
+    background: #000;
     padding: 15px;
     text-align: center;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    .hero h2 {
-        font-size: 1.8em;
-    }
+/* Fade In Animation */
+.fade-in {
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Background Gradient Animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 ```
@@ -271,10 +272,7 @@ footer {
 ## OUTPUT
 ![WhatsApp Image 2025-08-08 at 09 30 01_9a4bcd7b](https://github.com/user-attachments/assets/abdce4c0-1823-4d5d-a777-33e1f16aebe3)
 
-
-![Uploading WhatsApp Image 2025-08-08 at 09.30.01_d1dddfc2.jpg…]()
-
-
+![WhatsApp Image 2025-08-08 at 09 30 01_99526a5c](https://github.com/user-attachments/assets/11d218f4-da5f-4f4c-ab0a-f9e6c8426ac7)
 
 ## RESULT
 The program for creating Portfolio using HTML and CSS is executed successfully.
